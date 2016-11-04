@@ -1,12 +1,14 @@
 language: go
 sudo: false
 go:
+- 1.7.3
 - 1.6.2
 - tip
 cache:
   directories:
   - $HOME/local
   - ${TRAVIS_BUILD_DIR}/examples/browser/node_modules
+go_import_path: github.com/grpc-ecosystem/grpc-gateway
 before_install:
 - ./.travis/install-protoc.sh 3.1.0
 - ./.travis/install-swagger-codegen.sh 2.1.6
